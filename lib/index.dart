@@ -15,7 +15,7 @@ class _IndexState extends State<Index> {
 
   List<Widget> _pages = [
     HomePage(),
-    HomePage(),
+    SettingsPage(),
     HomePage(),
     HomePage(),
     SettingsPage(),

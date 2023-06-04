@@ -22,6 +22,12 @@ Future<Map<String, dynamic>> loginAPI(String email, String password) async {
     SharedPreferences.setMockInitialValues({});
     SharedPreferences prefs = await SharedPreferences.getInstance();
     await prefs.setString('user_id', jsonBody["mobileUser"]["_id"]);
+    print(jsonBody["mobileUser"]);
+    await prefs.setString('firstName', jsonBody["mobileUser"]["firstName"]);
+    await prefs.setString('lastName', jsonBody["mobileUser"]["lastName"]);
+    await prefs.setString('birthday', jsonBody["mobileUser"]["birthday"]);
+    await prefs.setString('sexe', jsonBody["mobileUser"]["sexe"]);
+    await prefs.setString('phone', jsonBody["mobileUser"]["phone"]);
     return jsonBody;
   } else {
     // If the server did not return a 200 OK response, throw an error.

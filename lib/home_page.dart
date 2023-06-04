@@ -11,7 +11,7 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   final List<Map<String, String>> doctors = [
     {
-      'name': 'Dr. John Doe',
+      'name': 'Dr. Sameh Doe',
       'address': '123 Main St',
       'specialty': 'Cardiology',
     },

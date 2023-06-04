@@ -72,7 +72,7 @@ class _SignupPageState extends State<SignupPage> {
             "password": _passwordController.text,
             "phone": _phoneController.text,
             "birthday": _selectedDate.toString(),
-            "male": _selectedSexe
+            "sexe": _selectedSexe == "Male" ? "H" : "F"
           });
           _showDialogWithAnimation();
           // Call your sign-up API here
@@ -210,7 +210,7 @@ class _SignupPageState extends State<SignupPage> {
                 decoration: InputDecoration(
                   labelText: 'Sexe',
                 ),
-                items: <String>['Male', 'Female', 'Other']
+                items: <String>['Male', 'Female']
                     .map<DropdownMenuItem<String>>((String value) {
                   return DropdownMenuItem<String>(
                     value: value,

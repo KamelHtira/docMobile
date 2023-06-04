@@ -88,18 +88,24 @@ class _DoctorDetailsPageState extends State<DoctorDetailsPage> {
       try {
         SharedPreferences prefs = await SharedPreferences.getInstance();
         final String? userId = prefs.getString('user_id');
+        final String? firstName = prefs.getString('firstName');
+        final String? lastName = prefs.getString('lastName');
+        final String? birthday = prefs.getString('birthday');
+        final String? sexe = prefs.getString('sexe');
+        final String? phone = prefs.getString('phone');
 
         final data = await addAppointmentAPI({
           "patientId": userId,
-          "firstName": "John",
-          "lastName": "Doe",
-          "birthday": "1990-01-01",
+          "firstName": firstName,
+          "lastName": lastName,
+          "birthday": birthday,
           "createdAt": DateTime.now().toString(),
           "initialType": "P",
           "appointmentDate": _selectedTime.toString(),
-          "description": "Lorem ipsum",
-          "phone": "1234567890",
-          "type": "P"
+          "description": "",
+          "phone": phone,
+          "type": "P",
+          "sexe": sexe
         });
 
         // Show success dialog

@@ -10,9 +10,8 @@ class LoginPage extends StatefulWidget {
 
 class _LoginScreenState extends State<LoginPage> {
   final _formKey = GlobalKey<FormState>();
-  final _emailController =
-      TextEditingController(text: "kamel2htira@outlook.com");
-  final _passwordController = TextEditingController(text: "1234");
+  final _emailController = TextEditingController(text: "");
+  final _passwordController = TextEditingController(text: "");
 
   String _errorMessage = '';
   bool _isLoading = false;
